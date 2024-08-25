@@ -9,4 +9,4 @@ Just [show me the graphs](https://compare-ci.github.io/admin/).
 **To do:**
 * [ ] Produce some pretty graphs from the output.
 * [ ] Get some more sophisticated repos and real life examples.
-* [ ] Get some more CI's in the mix.
+* [ ] Get some more CI's in the mixed.
