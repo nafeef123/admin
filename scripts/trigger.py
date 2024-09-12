@@ -38,7 +38,7 @@ def create_pull_request(repository, issue):
         parents=[repo.get_commits()[0].commit]
     )
     branch_ref = repo.get_git_ref("heads/%s" % time_str)
-    branch_ref.edit(new_commit.sha)
+    branch_ref.edit(new_commit.sha, force=True)
     pull = repo.create_pull(title, "Supports %s" % issue.html_url, "master", branch)
     print("Created pull request successfully:", pull.number)
     return pull
@@ -88,6 +88,7 @@ for repo in org.get_repos().get_page(0):
 
 def udpate_with_time(issue, repo, pull, check_run):
     # Reget, just in case.
+    print("Updating issue: %s with times" % (issue.number))
     issue = org.get_repo("admin").get_issue(issue.number)
     lines = issue.body.split("\n")
     found = 0
