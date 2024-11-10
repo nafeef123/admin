@@ -173,4 +173,4 @@ for x in range(0, 60):
 cmd("git", "config", "user.email", "andymckay@github.com")
 cmd("git", "config", "user.name", "Andy McKay")
 cmd("git", "commit", "-m", "Auto update CSV file", "data/data.csv")
-cmd("git"," run")
+cmd("git",
